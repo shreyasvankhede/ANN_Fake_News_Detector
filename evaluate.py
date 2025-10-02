@@ -35,7 +35,7 @@ class User:
      article.parse()
      data = article.title + " " + article.text
      cleaned = self.pre.clean_text(data)
-     # vectorize 
+     # vectorize (wrap in list)
      X = self.vect.transform([cleaned])
      return self.predictions(X)
 

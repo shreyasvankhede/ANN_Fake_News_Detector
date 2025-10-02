@@ -6,7 +6,7 @@ from evaluate import User
 #Title
 u1 = User()
 
-st.title("📰 Fake News Detector")
+st.title("Fake News Detector")
 
 link = st.text_input("Enter a news article URL:")
 
