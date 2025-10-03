@@ -12,8 +12,6 @@ class User:
     def __init__(self):
        print("Constructor called")
        self.pre=Preprocess()
-       with open("model/vectorizer.pkl", "rb") as f:
-         self.vect=pickle.load(f)
        mod_path="model/Fake_news_mod.keras"
        if os.path.exists(mod_path):
           print("Model loaded")
@@ -21,6 +19,8 @@ class User:
        else:
           print("Model not found")
           self.model=train_model()
+       with open("model/vectorizer.pkl", "rb") as f:
+          self.vect=pickle.load(f)
 
     def predictions(self,data):
        percent = self.model.predict(data)[0][0]  # get the scalar probability
