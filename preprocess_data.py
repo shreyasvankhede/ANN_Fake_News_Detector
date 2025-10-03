@@ -3,15 +3,19 @@ import numpy as np
 import re
 import nltk
 from nltk.corpus import stopwords
-from nltk.stem.porter import PorterStemmer
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
 
 nltk.download('stopwords', quiet=True)
 nltk.download('punkt', quiet=True)
+nltk.download('wordnet', quiet=True)    
+nltk.download('omw-1.4', quiet=True) 
+nltk.download('averaged_perceptron_tagger_eng', quiet=True)
 
 class Preprocess:
     def __init__(self):
         self.stop_words = set(stopwords.words('english'))
-        self.stemmer = PorterStemmer()
+        self.lemmatizer =WordNetLemmatizer()
 
     def mergedata(self):
         df_f = pd.read_csv('Data/Fake.csv')
@@ -27,5 +31,5 @@ class Preprocess:
         text = text.lower()
         text = re.sub(r"[^a-zA-Z\s]", " ", text)
         tokens = nltk.word_tokenize(text)
-        tokens = [self.stemmer.stem(w) for w in tokens if w not in self.stop_words]
+        tokens = [self.lemmatizer.lemmatize(w) for w in tokens if w not in self.stop_words] 
         return ' '.join(tokens)
