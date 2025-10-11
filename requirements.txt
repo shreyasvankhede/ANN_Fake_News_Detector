@@ -1,4 +1,5 @@
 tensorflow
+tensorflow-gpu
 scikit-learn
 pandas
 numpy
