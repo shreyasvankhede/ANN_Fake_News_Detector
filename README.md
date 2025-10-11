@@ -54,6 +54,13 @@ The dataset used is from [Kaggle - Fake and Real News Dataset](https://www.kaggl
 - ✅ Streamlit-powered web UI for easy testing  
 
 ---
+## Run on Streamlit cloud
+
+[Check out the project](https://shreyasvankhede-ann-fake-news-detector-app-hhjawe.streamlit.app/) 
+- No API keys required  
+
+
+---
 
 ## 💻 Run Locally
 
