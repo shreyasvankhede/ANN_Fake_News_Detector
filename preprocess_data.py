@@ -1,16 +1,16 @@
 import pandas as pd
-import numpy as np
 import re
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
-
 nltk.download('stopwords', quiet=True)
 nltk.download('punkt', quiet=True)
+nltk.download('punkt_tab', quiet=True)
 nltk.download('wordnet', quiet=True)    
 nltk.download('omw-1.4', quiet=True) 
 nltk.download('averaged_perceptron_tagger_eng', quiet=True)
+
 
 class Preprocess:
     def __init__(self):
