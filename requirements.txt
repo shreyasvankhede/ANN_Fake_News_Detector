@@ -1,5 +1,4 @@
 tensorflow
-tensorflow-gpu
 scikit-learn
 pandas
 numpy
@@ -8,13 +7,3 @@ newspaper3k
 lxml_html_clean
 streamlit
 gradio
-streamlit
-nltk
-rich
-markdown-it-py
-pygments
-mdurl
-pandas
-numpy
-scikit-learn
-
